@@ -1,0 +1,122 @@
+.contact__container{
+    display: grid;
+    place-items: center;
+}
+
+.contact__wrapper{
+    width: fit-content;
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact__wrapper a{
+    background: var(--color-primary);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    font-size: 2rem;
+    border: 2px solid transparent;
+    transition: var(--transition);
+}
+
+.contact__wrapper a:hover
+{
+    background: transparent;
+    border-color: var(--color-gray-100);
+}
+
+
+.emailContainer{
+    display: grid;
+grid-template-columns: 1fr 1fr;
+border: 2px solid aliceblue;
+border-radius: 5rem;
+overflow: hidden;
+}
+
+.inputs__container{
+    padding: 4rem;
+    text-align: center;
+}
+
+.inputs__container form{
+    margin-top: 2rem;
+}
+
+.input__container{
+	position:relative;
+	margin-bottom:30px;
+
+}
+
+.input__container label{
+	position:absolute;
+	top:10px;
+	left:10px;
+	font-size:16px;
+    pointer-events:none;
+	transition: all 0.5s ease-in-out;
+}
+.input__container input,
+.input__container textarea{
+  width:100%;
+  padding:8px 0 8px 10px;
+  font-size:16px;
+  color:#fff;
+  background-color: var(--color-gray-500);
+  line-height: 2rem;
+  border-radius: 1rem;
+  resize: none;
+}
+.input__container input:focus,
+.input__container textarea:focus{ 
+ outline:none;
+ border:1px solid var(--color-gray-400);	
+}
+
+.input__container input:focus ~ label,
+.input__container input:valid ~ label,
+.input__container textarea:focus ~ label,
+.input__container textarea:valid ~ label{
+	top:-18px;
+	font-size:12px;
+	
+}
+
+.contact__image-container img{
+    height: 100%;
+}
+
+.img__container{
+    height: 100%;
+margin-top: 0;
+border: 0;
+overflow: hidden;
+}
+
+
+.header__container img{
+    opacity: 0.5;
+}
+
+@media screen and (max-width: 600px){
+    .contact__wrapper{
+        gap: 1.5rem;
+    }
+
+    .contact__wrapper a{
+        padding: 1rem;
+        font-size: 1.2rem;
+        border-radius: 1rem;
+    }
+
+    .contact__image-container{
+        display: none;
+    }
+
+    .emailContainer{
+        grid-template-columns: 1fr;
+    }
+
+    
+}
